@@ -1,0 +1,34 @@
+<md-card class="example-card-1">FeedBack</md-card>
+
+
+<h6 class="h6"><md-card class="md">All Users</md-card></h6>
+<!-- <md-card class="card-1">
+  <h6 class="h">User Detail</h6>
+  <md-list   *ngIf="currentUserFlag">
+    <md-list-item class="list">Name:{{data.name}}</md-list-item>
+    <md-list-item class="list-1">Email:{{data.email}}</md-list-item>
+  </md-list>
+</md-card> -->
+    
+         <md-card class="example-card-6"><p>FeedBack</p>
+          
+        <div>
+          <div  *ngFor="let user of allusersprofile; let i = index">
+             <button class="b"  *ngIf="user.name != 'admin'" md-button (click)="find(i)">{{user.name}}</button>
+            </div>
+          <div *ngFor="let item of profiles | async">
+            <div *ngIf="item.name == 'admin'">
+              <p class="para-2">{{item.name}} : {{item.message}}</p>
+            </div>
+            <div *ngIf="item.name != 'admin'">
+              <div>
+                <span class="para-2">{{item.name}} : {{item.messages}}</span>
+              </div>
+            </div>
+          </div>
+                <md-form-field>
+                  <input mdInput placeholder="Message"  [(ngModel)]="adminreply">
+                </md-form-field>
+                <button class="b-1"  (click)="reply()" md-button>Submit</button>
+        </div>
+    

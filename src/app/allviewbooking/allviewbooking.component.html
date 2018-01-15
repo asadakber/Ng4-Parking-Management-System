@@ -1,0 +1,76 @@
+<!-- <md-card class="example-card">Admin Dashboard
+    <div class="container"> -->
+    <!-- <a routerLink="/parkingdashboard">ViewProfile</a> -->
+    <!-- <a routerLink="/bookparking">AllViewBooking</a>
+    <a routerLink="/viewbooking">AllViewUsers</a>
+    <a routerLink="/livechat">FeedBack</a>
+    <a (click)="logout()">LogOut</a>
+    </div>
+    </md-card> -->
+    <md-card class="example-card-1">AllViewBooking</md-card>
+    <md-tab-group>
+      <md-tab label="cantt station">
+
+          <div> <table>
+              <tr>
+                <th>Booking Location</th>
+                <th>Slot Booked</th>
+                <th>Booking Date</th>
+                <th>Booking Time</th>
+                <th>Booking Duration</th>
+                <th>Booking Status</th>
+              </tr>
+              <tr *ngFor="let key of arr; let i = index">
+                <td>{{key.place}}</td>
+                <td>{{key.slot}}</td>
+                <td>{{key.selectedDate}}</td>
+                <td>{{key.timeDuration}}</td>
+                <td>{{key.Duration}}</td>
+                <td><button class="but" (click)="cancel(i)"  md-raised-button>Cancel</button></td>
+              </tr>
+              
+            </table></div>
+      </md-tab>
+      <md-tab label="Jinnah International Airport">
+          <div> <table>
+              <tr>
+                <th>Booking Location</th>
+                <th>Slot Booked</th>
+                <th>Booking Date</th>
+                <th>Booking Time</th>
+                <th>Booking Duration</th>
+                <th>Booking Status</th>
+              </tr>
+              <tr *ngFor="let data of table; let i = index">
+                  <td>{{data.place}}</td>
+                  <td>{{data.slot}}</td>
+                  <td>{{data.selectedDate}}</td>
+                  <td>{{data.timeDuration}}</td>
+                  <td>{{data.Duration}}</td>
+                  <td><button class="but" (click)="delete(i)"  md-raised-button>Cancel</button></td>
+                </tr>
+              
+            </table></div>
+      </md-tab>
+      <md-tab label="The Palace Mall">
+          <div> <table>
+              <tr>
+                <th>Booking Location</th>
+                <th>Slot Booked</th>
+                <th>Booking Date</th>
+                <th>Booking Time</th>
+                <th>Booking Duration</th>
+                <th>Booking Status</th>
+              </tr>
+              <tr *ngFor="let data of Book; let i = index">
+                  <td>{{data.place}}</td>
+                  <td>{{data.slot}}</td>
+                  <td>{{data.selectedDate}}</td>
+                  <td>{{data.timeDuration}}</td>
+                  <td>{{data.Duration}}</td>
+                  <td><button class="but" (click)="del(i)"  md-raised-button>Cancel</button></td>
+                </tr>
+              
+            </table></div>
+          </md-tab>
+    </md-tab-group>

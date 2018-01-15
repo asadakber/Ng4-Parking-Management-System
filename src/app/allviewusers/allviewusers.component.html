@@ -1,0 +1,28 @@
+<!-- <md-card class="example-card">Admin Dashboard
+    <div class="container"> -->
+    <!-- <a routerLink="/parkingdashboard">ViewProfile</a> -->
+    <!-- <a routerLink="/bookparking">AllViewBooking</a>
+    <a routerLink="/viewbooking">AllViewUsers</a>
+    <a routerLink="/livechat">FeedBack</a>
+    <a (click)="logout()">LogOut</a>
+    </div>
+    </md-card> -->
+    <md-card class="example-card-1">AllViewUsers</md-card>
+    <md-card class="example-card-9">
+    <div> <table>
+        <tr>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Contact No</th>
+          <th>Address</th>
+          <th>Delete</th>
+        </tr>
+         <tr *ngFor="let data of user; let i = index">
+           <td>{{data.name}}</td>
+           <td>{{data.email}}</td>
+           <td>{{data.contactno}}</td>
+           <td>{{data.address}}</td>
+           <td> <button (click)="cancel(i)" md-raised-button class="but">Delete</button></td>
+         </tr>
+        
+      </table></div></md-card>

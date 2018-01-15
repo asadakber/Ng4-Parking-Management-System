@@ -1,0 +1,213 @@
+
+    <md-card class="example-card-1">Book Parking</md-card>
+    <div class="book">
+    <md-card class="example-card-2" >cantt station
+        <button (click) ="Show()" class="btn-1" md-button>Book Now</button>
+    </md-card>
+    <md-card *ngIf="show == true" class="example-card-3">   
+        <div *ngIf="showcanttstation">
+            <div style="text-align :center">
+          
+              <form [formGroup]="canttstationForm">
+                <div style="margin: 3%;padding : 40px">
+                  <input type="date"  (ngModelChange)="onDateChange($event)" formControlName="dateOptions" />
+                </div>
+                <div *ngIf="isTime" style="margin: 3%;padding : 40px">
+                  <md-select style="width : 14%" placeholder="select time" (change)="onTimeChange($event)" formControlName="timeOptions">
+                    <md-option *ngFor="let time of times" [value]="time.value">
+                      {{ time.viewValue }}
+                    </md-option>
+                  </md-select>
+                  <br><br><br>
+                </div>
+                <div *ngIf="isReservedHours" style="margin: 3%;padding : 40px">
+                  <md-select style="width : 14%" placeholder="hours" (change)="onReservedHrsChange($event)"  formControlName="reservedHoursOptions">
+                    <md-option *ngFor="let reservedHour of reserved_hours" #c [value]="reservedHour.value">
+                      {{ reservedHour.viewValue }} 
+                      <!-- {{t.value}} -->
+                    </md-option>
+                    <!-- {{t.value}} -->
+                  </md-select>
+                  <!-- {{t.value}} -->
+                  <br><br><br>
+                </div>
+          
+                <div *ngIf="isSubmitButton">
+                  <button  class="btn" md-raised-button (click)="submit()">Submit</button>
+                </div>
+          
+          
+          
+              </form>
+          
+            </div>
+          </div>
+          
+          
+          <div *ngIf="allSlots">
+            <div style="margin: 10px">
+
+          
+            </div>
+            <md-card style="text-align : center">
+              <div *ngFor="let a of buttons;let i = index" style="display : inline;text-align : center">
+          
+          
+                <div *ngIf="a.reserved == false" style="display : inline;text-align : center">
+          
+                  <button style="text-align : center" class="btn" style="margin : 10px" md-raised-button (click)="slots(a.slotNumber)">Slot {{a.slotNumber}}</button>
+                  <br *ngIf="(i % 3 == 2)">
+                </div>
+          
+          
+          
+                <div *ngIf="a.reserved == true" style="display : inline">
+          
+                  <button style="color : black; background : yellow" md-raised-button>Booked</button>
+                  <br *ngIf="(i % 3 == 2)">
+                </div>
+              </div>
+            </md-card>
+          </div>
+
+    </md-card>
+    <md-card class="example-card-2" >Jinnah National Airport
+        <button (click) ="Show1()" class="btn-1" md-button>Book Now</button> 
+    </md-card>
+    <md-card *ngIf="show1 == true" class="example-card-3">   
+        <div *ngIf="JinnahInternationalAirport">
+            <div style="text-align :center">
+          
+              <form [formGroup]="JinnahInternationalAirportForm">
+                <div style="margin: 3%;padding : 40px">
+                  <input type="date"  (ngModelChange)="ondatechange($event)" formControlName="DATE" />
+                </div>
+                <div *ngIf="istime" style="margin: 3%;padding : 40px">
+                  <md-select style="width : 14%" placeholder="select time" (change)="ontimechange($event)" formControlName="TIME">
+                    <md-option *ngFor="let time of times" [value]="time.value">
+                      {{ time.viewValue }}
+                    </md-option>
+                  </md-select>
+                  <br><br><br>
+                </div>
+                <div *ngIf="isreservedhours" style="margin: 3%;padding : 40px">
+                  <md-select style="width : 14%" placeholder="hours" (change)="onreservedhrschange($event)" formControlName="HOURS">
+                    <md-option *ngFor="let reservedHour of reserved_hours" #c [value]="reservedHour.value">
+                      {{ reservedHour.viewValue }} 
+                      <!-- {{t.value}} -->
+                    </md-option>
+                    <!-- {{t.value}} -->
+                  </md-select>
+                  <!-- {{t.value}} -->
+                  <br><br><br>
+                </div>
+          
+                <div *ngIf="issubmitbutton">
+                  <button  class="btn" md-raised-button (click)="showSlot()">Submit</button>
+                </div>
+          
+          
+          
+              </form>
+          
+            </div>
+          </div>
+          
+          
+          <div *ngIf="allSlots">
+            <div style="margin: 10px">
+
+          
+            </div>
+            <md-card style="text-align : center">
+              <div *ngFor="let a of Buttons;let i = index" style="display : inline;text-align : center">
+          
+          
+                <div *ngIf="a.reserve == false" style="display : inline;text-align : center">
+          
+                  <button style="text-align : center" class="btn" style="margin : 10px" md-raised-button (click)="reserveslot(a.slotN)">Slot {{a.slotN}}</button>
+                  <br *ngIf="(i % 3 == 2)">
+                </div>
+          
+          
+          
+                <div *ngIf="a.reserve == true" style="display : inline">
+          
+                  <button style="color : black; background : yellow" md-raised-button>Booked</button>
+                  <br *ngIf="(i % 3 == 2)">
+                </div>
+              </div>
+            </md-card>
+          </div>
+      </md-card>
+    <md-card class="example-card-2" >The Palace Mall
+        <button (click)="Show2()" class="btn-1" md-button>Book Now</button>
+      </md-card>
+      <md-card *ngIf="show2 == true" class="example-card-3">   
+          <div *ngIf="Thepalacemall">
+              <div style="text-align :center">
+            
+                <form [formGroup]="ThePalaceMallForm">
+                  <div style="margin: 3%;padding : 40px">
+                    <input type="date"  (ngModelChange)="ondatechanges($event)" formControlName="DATES" />
+                  </div>
+                  <div *ngIf="istimes" style="margin: 3%;padding : 40px">
+                    <md-select style="width : 14%" placeholder="select time" (change)="ontimechanges($event)" formControlName="TIMES">
+                      <md-option *ngFor="let time of times" [value]="time.value">
+                        {{ time.viewValue }}
+                      </md-option>
+                    </md-select>
+                    <br><br><br>
+                  </div>
+                  <div *ngIf="isreservedhour" style="margin: 3%;padding : 40px">
+                    <md-select style="width : 14%" placeholder="hours" (change)="onreservedhrschanges($event)"  formControlName="RESHOURS">
+                      <md-option *ngFor="let reservedHour of reserved_hours" #c [value]="reservedHour.value">
+                        {{ reservedHour.viewValue }} 
+                        <!-- {{t.value}} -->
+                      </md-option>
+                      <!-- {{t.value}} -->
+                    </md-select>
+                    <!-- {{t.value}} -->
+                    <br><br><br>
+                  </div>
+            
+                  <div *ngIf="issubmitbuttons">
+                    <button  class="btn" md-raised-button (click)="bookSlot()">Submit</button>
+                  </div>
+            
+            
+            
+                </form>
+            
+              </div>
+            </div>
+            
+            
+            <div *ngIf="allSlots">
+              <div style="margin: 10px">
+  
+            
+              </div>
+              <md-card style="text-align : center">
+                <div *ngFor="let a of BUTTONS;let i = index" style="display : inline;text-align : center">
+            
+            
+                  <div *ngIf="a.res == false" style="display : inline;text-align : center">
+            
+                    <button style="text-align : center" class="btn" style="margin : 10px" md-raised-button (click)="resslots(a.slotNm)">Slot {{a.slotNm}}</button>
+                    <br *ngIf="(i % 3 == 2)">
+                  </div>
+            
+            
+            
+                  <div *ngIf="a.res == true" style="display : inline">
+            
+                    <button style="color : black; background : yellow" md-raised-button>Booked</button>
+                    <br *ngIf="(i % 3 == 2)">
+                  </div>
+                </div>
+              </md-card>
+            </div>
+        </md-card>
+    </div>
+  

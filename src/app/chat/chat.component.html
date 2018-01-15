@@ -1,0 +1,24 @@
+<md-card class="example-card-1">FeedBack</md-card>
+
+     <md-card class="example-card-6"><p>FeedBack</p>
+      
+    <div>
+      <div *ngFor="let item of profiles | async">
+        <div *ngIf="item.name == 'admin'">
+          <p class="para-2">{{item.name}} : {{item.message}}</p>
+        </div>
+
+        <div *ngIf="item.name != 'admin'">
+          <div>
+            <span class="para-2">{{item.name}} : {{item.messages}}</span>
+          </div>
+        </div>
+      </div>
+
+      
+            <md-form-field>
+              <input mdInput placeholder="Message"  [(ngModel)]="message">
+            </md-form-field>
+            <button  (click)="send()" md-button>Submit</button>
+    </div>
+    </md-card>

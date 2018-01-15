@@ -1,0 +1,31 @@
+<md-card class="example-card-1"><div><h4>Real-Time Parking Booking System</h4></div>
+
+  </md-card>
+  
+  <md-card class="example-card"><h3>SignUp</h3>
+
+            <md-form-field class="example-full-width">
+              <input mdInput  placeholder="Name" name="name" [(ngModel)]="name">
+            </md-form-field>
+   
+              <md-form-field class="example-full-width" >
+                <input mdInput  placeholder="Email" name="email" [(ngModel)]="email">
+              </md-form-field>
+  
+                <md-form-field class="example-full-width" >
+                  <input type="password" mdInput  placeholder="Password" name="password" [(ngModel)]="password">
+                </md-form-field>
+
+                  <md-form-field class="example-full-width" >
+                    <input mdInput  placeholder="Contact No" name="contactno" [(ngModel)]="contactno">
+                  </md-form-field>
+
+                    <md-form-field class="example-full-width">
+                      <input mdInput  placeholder="Address" name="address" [(ngModel)]="address">
+                    </md-form-field><br>
+                    <md-radio-group [(ngModel)]="type">
+                      <md-radio-button value="user">User</md-radio-button>
+                    </md-radio-group><br><br>
+                    <button  (click)="signup()" [disabled]="!name || !email || !password || !contactno || !address || !type" md-raised-button color="primary">SignUp</button>
+                    <div class="div-1">already registered?<a routerLink="/signin"> login </a></div>
+  </md-card>

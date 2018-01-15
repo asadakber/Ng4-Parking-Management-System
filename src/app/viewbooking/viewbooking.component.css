@@ -1,0 +1,176 @@
+.example-card {
+    background-color:#483d8b;
+    color: white;
+    font-size: 16px;
+}
+
+.example-card-2 {
+    background-color:#483d8b;
+    color: white;
+    font-size: 16px;
+    width: 1000px;
+    margin-top: 50px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+}
+
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.example-card-1 {
+    height: 20px;
+    text-align: center;
+    color: #483d8b;
+    font-size: 30px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 5px;
+}
+
+.container {
+    float: right;
+    word-spacing: 20px;
+  
+}
+
+div a {
+    text-decoration: none;
+    color: white;
+}
+
+.container a {
+    color: white;
+    cursor: pointer;
+   
+}
+
+.box {
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.btn {
+    background-color:  #483d8b;
+    color: white;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin: 8px 0;
+    border: none;
+    height: 40px;
+}
+
+.book {
+  margin-left: 150px;
+}
+
+.btn-1 {
+    float: right;
+}
+
+.example-card-3 {
+    width: 1000px;
+  }
+
+ .box {
+     text-align: center;
+     font-size: 20px;
+ }
+
+ .box-1 {
+    text-align: center;
+    margin-left: 40px;
+}
+
+.box-2 {
+    text-align: center;
+    margin-left: 40px;
+    margin-top: 50px;
+}
+
+.box-3 {
+    text-align: center;
+    margin-left: 40px;
+    margin-top: 50px;
+}
+
+ .example-full-width {
+     width: 500px;
+     text-align: left;
+  
+ }
+  
+ .btn-2 {
+    background-color:  #483d8b;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin: 8px 0;
+    border: none;
+    height: 40px;
+}
+
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+}
+
+div {
+    margin-top: 50px;
+}
+
+.link {
+  word-spacing: 30px;
+  text-align: center;
+}
+
+.but {
+    background-color: #483d8b;
+    color: white;
+}
+
+th {
+    background-color: #483d8b;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    border: 0px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+td {
+    font-size: 18px;
+    text-align: center;
+    background-color: white;
+    color: #483d8b;
+    border: 0px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+
+
+
